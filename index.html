@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="aset/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="aset/size.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="aset/image/icon.png" alt="Logo" class="logo-image">
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#structure">Structure & Schedule</a></li>
+          </ul>
+        </nav>
+      </header>
+  <main class="main">
+    <div class="welcome-section">
+      <h1>Hi, Visitor!</h1>
+      <h2>WELCOME</h2>
+      <p>TO SISFOR 22</p>
+    </div>
+  
+    <div class="statistics">
+      <span style="color: cyan;">22</span>
+      <span style="color: pink;">37</span>
+      <span style="color: red;">12</span>
+    </div>
+  
+    <div class="links">
+      <a href="#" class="link-card">
+        <i class="fa fa-instagram"></i>
+        Class Instagram
+      </a>
+      <a href="#" class="link-card">
+        <i class="fa fa-link"></i>
+        Old Website
+      </a>
+      <a href="#" class="link-card">
+        <i class="fa fa-paper-plane"></i>
+        Text Anonim
+      </a>
+    </div>
+  </main>
+  <script src="aset/script.js"></script>
+  <SCript>
+    
+  // Pilih elemen menu toggle dan navigasi
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav ul');
+
+  // Tambahkan event listener untuk toggle menu
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Tutup menu jika pengguna mengklik di luar menu
+  document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+      navMenu.classList.remove('active');
+    }
+  });
+
+
+  </SCript>
+</body>
+</html>
